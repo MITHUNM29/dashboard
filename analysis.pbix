@@ -1,0 +1,56 @@
+import zipfile
+import os
+
+# Prepare the folder structure for GitHub repository mock
+repo_path = "/mnt/data/Sales-Dashboard"
+dataset_path = os.path.join(repo_path, "Dataset")
+screenshots_path = os.path.join(repo_path, "Screenshots")
+pbix_placeholder_path = os.path.join(repo_path, "PowerBI_File")
+
+# Create folder structure
+os.makedirs(dataset_path, exist_ok=True)
+os.makedirs(screenshots_path, exist_ok=True)
+os.makedirs(pbix_placeholder_path, exist_ok=True)
+
+# Move the dataset CSV into the Dataset folder
+csv_dest_path = os.path.join(dataset_path, "sales_data.csv")
+os.rename("/mnt/data/sales_data.csv", csv_dest_path)
+
+# Create a placeholder .pbix file to simulate dashboard file
+pbix_path = os.path.join(pbix_placeholder_path, "Sales_Dashboard.pbix")
+with open(pbix_path, "w") as f:
+    f.write("This is a placeholder for the Power BI dashboard file. Please replace with your .pbix project.")
+
+# Create a README file
+readme_path = os.path.join(repo_path, "README.md")
+readme_content = """
+# 💼 Sales Performance Dashboard | Power BI
+
+A fully interactive dashboard built using Power BI to visualize and analyze sales data across different regions and categories.
+
+---
+
+## 🔧 Tools Used
+- Microsoft Power BI
+- Dataset: CSV (Sales)
+- GitHub for documentation
+
+---
+
+## 📊 Features
+
+- 📌 KPI Cards: Total Sales, Profit, Quantity
+- 📍 Visuals:
+  - Sales by Region
+  - Profit by Category
+  - Monthly Sales Trend
+- 🔍 Filters:
+  - Region
+  - Category
+  - Date Range
+- 📈 Actionable insights for decision-making
+
+---
+
+## 📁 Folder Structure
+
