@@ -30,3 +30,7 @@ Overall, this Power BI dashboard not only presents sales data visually but also 
 
 
 output
+
+
+
+![Image](https://github.com/user-attachments/assets/f3d3adce-74e9-488a-bd52-254ad2313557)
